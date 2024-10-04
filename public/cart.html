@@ -1,0 +1,117 @@
+<!-- updated code -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS -->
+    <script src="cart.js" defer></script> <!-- Link to your JavaScript -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="images/vegiemart_logo.jpeg" alt="Logo" >
+            </a>
+        </div>
+      
+        <div class="header-right">
+            <img src="images/carticon.jpg" alt="Cart Logo" id="cartIcon" style="width: 100px;">
+        </div>
+    </header>
+    <h1 style="text-align: center;">Your Cart</h1>
+    <div id="cartContainer" style="text-align: center; margin: 0 auto;">
+        <p id="emptyMessage">Your cart is empty.</p>
+        <table id="cartTable" style="display: none; margin: 0 auto;">
+            <thead>
+                <tr>
+                    <th>Vegetable</th>
+                    <th>Quantity</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Cart items will be populated here by cart.js -->
+            </tbody>
+        </table>
+    </div>
+     
+    <div class="cart-buttons" style="text-align: center; margin-top: 20px;">
+        <a href="index.html" class="button" style="display: inline-block; background-color: rgb(16, 16, 16); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Continue Shopping</a>
+    
+        <!-- Direct to Checkout -->
+        <button onclick="window.location.href='checkout.html'" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">Proceed to Checkout</button>
+    
+        <!-- Direct to Order Now Form on index.html
+         <a href="index.html">
+        <button id="order"  style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">Order Now</button>
+         </a>
+        -->
+    </div>
+    
+
+
+
+
+
+<!--<div class="cart-buttons" style="text-align: center; margin-top: 20px;">
+        <a href="index.html" class="button" style="display: inline-block; background-color: rgb(16, 16, 16); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;">Continue Shopping</a>-->
+        <!--for direct checkout again not selecting the vegetables-->
+  <!--      <button  onclick="window.location.href='checkout.html'" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin: 10px;">Proceed to Checkout</button> -->
+       
+        <!-- Proceed to Checkout button where it direct to order now form -->
+         
+  <!--      <button id="proceed-to-checkout" onclick="window.location.href='index.html#order'" style="background-color: green; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; margin-top: 10px;">order now</button>
+         
+    </div> 
+    -->
+</body>
+<!--<script>
+    document.getElementById('proceed-to-checkout').addEventListener('click', function() {
+        // Find the order form section in index.html
+        window.location.href = 'index.html#order'; // Scrolls to the order form section in index.html
+    });
+    </script>
+-->
+</html>
+
+
+
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Cart</title>
+    <style>
+        table { width: 100%; border-collapse: collapse; }
+        table, th, td { border: 1px solid black; }
+        th, td { padding: 8px; text-align: left; }
+    </style>
+</head>
+<body>
+    <h1>Your Cart</h1>
+    <table id="cartTable">
+        <thead>
+            <tr>
+                <th>Vegetable</th>
+                <th>Quantity</th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+             Cart items will be inserted here by JavaScript -->
+<!--      </tbody>
+    </table>
+    <button onclick="window.location.href='index.html'">Continue Shopping</button>
+    <button onclick="window.location.href='#order'">Proceed to Checkout</button>
+
+    <script src="cart.js"></script>
+</body>
+</html>
+-->

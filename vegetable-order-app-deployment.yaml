@@ -1,0 +1,60 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vegetable-order-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: vegetable-order-app
+  template:
+    metadata:
+      labels:
+        app: vegetable-order-app
+    spec:
+      containers:
+      - name: your-app-container
+        image: pooja434/all-vegetable-order-app-app
+        ports:
+          - containerPort: 3000
+        env:
+         - name: MONGO_URI
+           value: "mongodb://mongo-service:27017/vegetable_order_app"
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: vegetable-order-app
+#spec:
+#  replicas: 1
+#  selector:
+#    matchLabels:
+#      app: vegetable-order-app
+#  template:
+#    metadata:
+#      labels:
+#        app: vegetable-order-app
+#    spec:
+#      containers:
+#      - name: your-app-container
+#        image: pooja434/all-vegetable-order-app-app
+#        ports:
+#          - containerPort: 3000
+#        env:
+#          - name: MONGODB_URI
+#            value: "mongodb://mongo-service:27017/vegetable_order_app"
+#        livenessProbe:
+#          httpGet:
+#            path: /
+#            port: 3000
+#          initialDelaySeconds: 60  # Adjust as needed
+#          periodSeconds: 10         # How often to check if the container is alive
+#          timeoutSeconds: 5         # Timeout for each probe
+#          failureThreshold: 3       # Restart after 3 consecutive failures
+#        readinessProbe:
+#          httpGet:
+#            path: /
+#            port: 3000
+#          initialDelaySeconds: 30  # Give the app time to initialize
+#          periodSeconds: 10        # How often to check readiness
+#          timeoutSeconds: 5        # Timeout for each probe
+#          failureThreshold: 3      # Mark pod not ready after 3 consecutive failures
